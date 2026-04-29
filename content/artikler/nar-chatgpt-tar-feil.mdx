@@ -1,0 +1,68 @@
+---
+title: "Når ChatGPT tar feil – og du ikke oppdager det"
+description: "AI-verktøy kan skrive overbevisende tekst om ting de ikke har peiling på. Slik bygger du en vane for å sjekke det som faktisk må sjekkes."
+author: "Silje Strand"
+publishedAt: "2025-03-12"
+updatedAt: "2025-03-14"
+tags: ["AI", "faktasjekk", "innholdsproduksjon"]
+---
+
+Det startet med en uskyldig melding fra en kollega.
+
+<ChatThread>
+  <ChatBubble sender="Marte" message="Hei! Kan du dobbeltsjekke introen jeg har skrevet med ChatGPT? Noe kjennes feil." time="09.14" side="left" />
+  <ChatBubble sender="Meg" message="Sender over nå" time="09.15" side="right" />
+  <ChatBubble sender="Marte" message="Takk 🙏 det gjelder avsnittet om EU-direktivet" time="09.15" side="left" />
+</ChatThread>
+
+Introteksten var glatt og tillitsvekkende skrevet. Den siterte et EU-direktiv med fullt navn, årstall og artikkelnummer. Problemet: direktivet fantes ikke. AI-en hadde fabrikert det fra bunnen av, med et navn som klang plausibelt og et nummer som passet inn i rekken.
+
+Dette er ikke en sjelden feil. Det er en strukturell svakhet i store språkmodeller.
+
+## Hvorfor skjer det?
+
+Språkmodeller er trent til å generere sannsynlig tekst – ikke sann tekst. Når en modell skriver "i henhold til EU-direktiv 2021/1234/EU" er det fordi den tekststrengen er plausibel gitt konteksten, ikke fordi den har slått opp i et register.
+
+Modellen «vet» ikke at direktivet eksisterer. Den vet at slike setninger ser ut på en bestemt måte, og produserer en setning som ligner.
+
+Resultatet er at jo mer spesifikk og autoritativt en feil ser ut, jo mer sannsynlig er det at den passerer uoppdaget.
+
+## De tre kategoriene du må sjekke manuelt
+
+Ikke alt AI skriver trenger like grundig verifisering. Disse tre kategoriene er de farligste:
+
+**1. Sitat og referanser**
+Juridiske paragrafer, forskningsresultater, boksitering og statistikk. Her er feilraten høy og konsekvensen av en feil stor. Slå alltid opp i kilden.
+
+**2. Navn og titler på personer**
+AI blander ofte opp navn, roller og tilknytning til organisasjoner. En direktør kan bli til styreleder, en professor kan bli tilskrevet feil institusjon.
+
+**3. Tall og datoer**
+Årstall for hendelser, prosenttall fra undersøkelser og kronologier. Modellen kan ha forvekslet en dato fra treningsdataene med konteksten i oppgaven din.
+
+## En samtale som illustrerer problemet
+
+<ChatThread>
+  <ChatBubble sender="Meg" message="Kan du sjekke om tallet du oppga er riktig – '73 prosent av norske bedrifter bruker AI i 2024'?" time="10.02" side="left" />
+  <ChatBubble sender="ChatGPT" message="Du har rett i å spørre. Jeg er ikke sikker på at det eksakte tallet er riktig. Det reflekterer en generell trend jeg har lært om, men det kan være basert på en eldre eller upresis kilde. Jeg anbefaler å verifisere mot f.eks. SSB, Menon eller NHO." time="10.02" side="right" />
+  <ChatBubble sender="Meg" message="Hvorfor skrev du det da?" time="10.03" side="left" />
+  <ChatBubble sender="ChatGPT" message="Fordi du ba om et konkret tall og jeg genererte noe sannsynlig. Det burde jeg ha flagget som usikkert med en gang." time="10.03" side="right" />
+</ChatThread>
+
+Det som er verdt å merke seg: modellen *kan* fortelle deg at den er usikker – men bare hvis du spør direkte. I flyten av en innholdsproduksjonsoppgave gjør du sjelden det.
+
+## En enkel sjekkeliste
+
+Ikke lag deg et enormt prosessopplegg. Start med dette:
+
+- Les gjennom ferdig AI-tekst og marker alle konkrete påstander (tall, navn, datoer, lovhenvisninger)
+- Slå opp én tilfeldig påstand per tekst, selv om du tror den er riktig
+- Spør direkte: "Er du sikker på dette tallet?" – svarene er ofte avslørende
+
+Over tid får du en intuitiv følelse for hvilke typer påstander som er høyrisiko i ditt fagfelt.
+
+## Konklusjon
+
+AI er et godt verktøy for å generere struktur, utkast og ideer. Det er et dårlig verktøy for å huske fakta. Ansvaret for at teksten er korrekt ligger fremdeles hos deg – og det er ikke et teknisk problem som løser seg av seg selv.
+
+Sjekk kildene. Spesielt de som ser ut som de ikke trenger å sjekkes.
