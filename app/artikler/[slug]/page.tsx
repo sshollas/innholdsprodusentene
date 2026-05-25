@@ -93,12 +93,45 @@ export default async function ArticlePage({
     keywords: frontmatter.tags.join(', '),
   }
 
+  const hubItemListJsonLd =
+    slug === 'autentisk-video-sosiale-medier'
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: 'Artikler om autentisk video på sosiale medier',
+          itemListElement: [
+            'hva-er-autentisk-video',
+            'hvorfor-bedriftsvideo-ikke-fungerer',
+            'problemet-er-ikke-video-men-budskapet',
+            'hvorfor-ansatte-blir-utrygge-foran-kamera',
+            'hvordan-lage-video-som-faktisk-blir-sett',
+            'hvorfor-de-forste-fem-sekundene-avgjor-om-videoen-blir-sett',
+            'derfor-bor-du-tekste-alle-videoer',
+            'hvorfor-god-lyd-er-halve-videoen',
+            'hva-du-bor-male-nar-visninger-ikke-er-nok',
+            'slik-gjor-du-en-video-om-til-fem-innlegg',
+            'slik-far-du-fart-pa-distribusjonen',
+            'slik-bygger-du-en-fast-publiseringsrutine-uten-a-brenne-deg-ut',
+          ].map((articleSlug, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            url: `${SITE_URL}/artikler/${articleSlug}`,
+          })),
+        }
+      : null
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {hubItemListJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(hubItemListJsonLd) }}
+        />
+      )}
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
         <header className="mb-10">
